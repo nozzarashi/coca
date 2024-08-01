@@ -70,5 +70,5 @@ label {
 .container {
   margin: 0 auto;
   padding: var(--container-padding);
-  max-width: calc(var(--container-width) (var(--container-padding) * 2));
+  max-width: calc(var(--container-width) + (var(--container-padding) * 2));
 }
