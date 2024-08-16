@@ -1,39 +1,27 @@
 .hero {
-  overflow-x: hidden;
-  padding: 201px 0 141px;
+  position: relative;
+  padding: 87px 0 141px;
+
+  @include mini-desktop {
+    padding: 77px 0 121px;
+  }
+
+  @include small-tablet {
+    padding: 35px 0 70px;
+  }
 
   &__container {
-    position: relative;
     @include flex-justify-between;
+    gap: 15px;
+    flex-wrap: wrap;
     align-items: flex-end;
-  }
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 130px;
-    left: 70px;
-    z-index: var(--z-index-0);
-    display: inline-block;
-    border-radius: 100%;
-    width: 551px;
-    height: 551px;
-    background: #fa741433;
-    filter: blur(220px);
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    top: 287px;
-    right: -300px;
-    z-index: var(--z-index-0);
-    display: inline-block;
-    border-radius: 100%;
-    width: 525px;
-    height: 525px;
-    background: var(--success-color-70);
-    filter: blur(90px);
+    @include mini-desktop {
+      gap: 130px;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
   }
 
   &__left {
@@ -47,6 +35,29 @@
     line-height: 120%;
     letter-spacing: -0.04em;
     color: var(--neutral-color-100);
+
+    @include mini-desktop {
+      margin-bottom: 80px;
+    }
+
+    @include tablet {
+      margin-bottom: 50px;
+      font-size: 70px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 35px;
+      font-size: 55px;
+    }
+
+    @include mobile {
+      margin-bottom: 30px;
+      font-size: 49px;
+    }
+
+    @include small-mobile {
+      margin-bottom: 25px;
+    }
   }
 
   &__subtitle {
@@ -58,11 +69,27 @@
     padding: 14px 44px;
     color: var(--neutral-color-10);
     background-color: var(--neutral-color-100);
+
+    @include mobile {
+      width: 100%;
+      max-width: 280px;
+    }
   }
 
   &__form {
     @include flex-align-center;
     gap: 16px;
+
+    @include mini-desktop {
+      justify-content: center;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+    }
 
     &-input {
       border-bottom: 1px solid var(--neutral-color-40);
@@ -79,6 +106,13 @@
 
   &__right {
     position: relative;
+
+    ///////////////////////////////////// бля короче тут надо бы покрасивее сделаь вообще в идеале, а то убрал данилка все нахуй вообше, но это позде как нибудь............... ))
+    /////////////////////////////////
+
+    @include mini-desktop {
+      display: none;
+    }
   }
 
   &__sales {
@@ -89,6 +123,10 @@
     background: #fff;
     transform: rotate(-0deg);
 
+    @include small-desktop {
+      max-width: 320px;
+    }
+
     &-title {
       margin-bottom: 16px;
       font-family: var(--font-family);
@@ -96,6 +134,12 @@
       font-size: 20px;
       line-height: 150%;
       color: #1d1e25;
+    }
+
+    &-img {
+      @include small-desktop {
+        max-width: 280px;
+      }
     }
   }
 
@@ -109,6 +153,12 @@
     box-shadow: 20px 40px 80px 0 #5960871f;
     background: #fff;
 
+    @include small-desktop {
+      top: -80px;
+      right: 0;
+      max-width: 175px;
+    }
+
     &-title {
       margin-bottom: 12px;
       font-weight: 700;
@@ -116,6 +166,12 @@
       line-height: 187%;
       letter-spacing: -0.5px;
       color: #1d1e25;
+    }
+
+    &-img {
+      @include small-desktop {
+        max-width: 120px;
+      }
     }
   }
 
@@ -137,7 +193,7 @@
     }
 
     &-body {
-      &-th {
+      &-td {
         font-weight: 700;
         font-size: 20px;
         line-height: 130%;
