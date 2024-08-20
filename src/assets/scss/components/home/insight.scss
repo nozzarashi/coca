@@ -1,0 +1,117 @@
+.insight {
+  &__container {
+    border-top: 1px solid var(--neutral-color-30);
+    padding-top: 160px;
+    padding-bottom: 91px;
+
+    @include mobile {
+      padding-top: 86px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: -2px;
+    color: var(--neutral-color-100);
+  }
+
+  &__text {
+    margin-bottom: 80px;
+    font-weight: 500;
+    line-height: 177%;
+    color: var(--neutral-color-110);
+
+    @include mobile {
+      margin-bottom: 38px;
+    }
+  }
+
+  &__title,
+  &__text {
+    text-align: center;
+  }
+
+  &__slide {
+    position: relative;
+    max-width: 582px;
+    transform: none !important;
+
+    @include tablet {
+      max-width: 480px;
+    }
+
+    &-img {
+      margin-bottom: 16px;
+    }
+
+    &-head {
+      @include flex-all-between;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+      font-weight: 400;
+      line-height: 150%;
+      color: var(--neutral-color-110);
+
+      @include small-mobile {
+        flex-direction: column;
+        align-items: start;
+      }
+    }
+
+    &-title {
+      font-weight: 600;
+      line-height: 150%;
+      letter-spacing: -0.64px;
+      color: var(--neutral-color-100);
+
+      @include small-tablet {
+        text-align: center;
+      }
+    }
+  }
+}
+
+// --- псевдоэлемент слайдера ---
+
+.swiper-slide-active {
+  &::after {
+    content: '';
+    position: absolute;
+    top: 126px;
+    left: 96%;
+    z-index: var(--z-index-3);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40' fill='none'%3E%3Cpath d='M24.9998 13.3334L31.6665 20L24.9998 26.6667M14.9998 26.6667L8.33317 20L14.9998 13.3334' stroke='%237E8492' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    @include flex-all-center;
+    background-color: var(--neutral-color-10);
+
+    @include mini-desktop {
+      top: 126px;
+      left: 96.7%;
+      width: 70px;
+      height: 70px;
+    }
+
+    // @include large-tablet {
+    //   top: 100px;
+    //   left: 96.5%;
+    //   width: 70px;
+    //   height: 70px;
+    // }
+
+    @include tablet {
+      display: none;
+    }
+
+    @include mobile {
+      display: flex;
+      left: 96%;
+    }
+  }
+}
