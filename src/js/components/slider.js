@@ -1,4 +1,5 @@
 import Swiper from 'swiper';
+import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 
 export const useInsightSlider = () => {
@@ -12,6 +13,19 @@ export const useInsightSlider = () => {
       993: {
         centeredSlides: false,
       },
+    },
+  });
+};
+
+export const useTestimonialsSlider = () => {
+  new Swiper('.testimonials__slider', {
+    modules: [Navigation],
+    spaceBetween: 180,
+    loop: true,
+
+    navigation: {
+      prevEl: '.testimonials__btn--prev',
+      nextEl: '.testimonials__btn--next',
     },
   });
 };

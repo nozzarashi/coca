@@ -5,7 +5,12 @@
     padding-bottom: 91px;
 
     @include mobile {
-      padding-top: 86px;
+      padding-top: 85px;
+      padding-bottom: 60px;
+    }
+
+    @include small-mobile {
+      padding-bottom: 50px;
     }
   }
 
@@ -75,7 +80,7 @@
 
 // --- псевдоэлемент слайдера ---
 
-.swiper-slide-active {
+.insight__slide.swiper-slide-active {
   &::after {
     content: '';
     position: absolute;
@@ -98,20 +103,28 @@
       height: 70px;
     }
 
-    // @include large-tablet {
-    //   top: 100px;
-    //   left: 96.5%;
-    //   width: 70px;
-    //   height: 70px;
-    // }
-
     @include tablet {
       display: none;
     }
 
     @include mobile {
+      top: 25%;
+      left: 91%;
       display: flex;
-      left: 96%;
+    }
+
+    @include mobile-l {
+      width: 65px;
+      height: 65px;
+      top: 23%;
+      left: 91%;
+    }
+
+    @include mobile-l {
+      width: 55px;
+      height: 55px;
+      top: 21%;
+      left: 92%;
     }
   }
 }
