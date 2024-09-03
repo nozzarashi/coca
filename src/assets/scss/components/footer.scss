@@ -1,0 +1,363 @@
+.footer {
+  padding: 112px 0 58px;
+  color: #fff;
+  background: var(--neutral-color-60);
+
+  @include mobile {
+    padding-top: 65px;
+  }
+
+  &__head {
+    @include flex-all-between;
+    margin-bottom: 134px;
+
+    @include tablet {
+      gap: 30px;
+      margin-bottom: 100px;
+    }
+
+    @include small-tablet {
+      gap: 40px;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 75px;
+    }
+
+    @include mobile {
+      align-items: center;
+      margin-bottom: 60px;
+      text-align: center;
+    }
+
+    &-text {
+      max-width: 720px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-weight: 600;
+    line-height: 120%;
+  }
+
+  &__text {
+    max-width: 543px;
+    font-weight: 500;
+    line-height: 177%;
+    color: var(--neutral-color-110);
+  }
+
+  &__btn {
+    display: flex;
+    flex-shrink: 0;
+    border-radius: 100px;
+    padding: 16px 32px;
+    color: var(--dark-bg-color);
+    background-color: #fff;
+  }
+
+  &__logo {
+    display: inline-block;
+    margin-bottom: 15px;
+
+    @include tablet {
+      margin-bottom: 0;
+    }
+  }
+
+  &__body {
+    @include flex-all-between;
+    gap: 144px;
+    padding-bottom: 56px;
+
+    @include tablet {
+      gap: 40px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    @include small-tablet {
+      flex-direction: column-reverse;
+    }
+
+    &-info {
+      @include mini-desktop {
+        align-self: flex-start;
+      }
+
+      @include tablet {
+        @include flex-align-center;
+        gap: 40px;
+      }
+
+      @include small-tablet {
+        gap: 10px;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    &-descr {
+      max-width: 292px;
+      font-weight: 500;
+      line-height: 162%;
+      color: var(--neutral-color-110);
+
+      @include tablet {
+        max-width: 500px;
+      }
+    }
+  }
+
+  &__nav {
+    @include tablet {
+      width: 100%;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 92px;
+
+    @include mini-desktop {
+      gap: 50px;
+      justify-content: center;
+    }
+
+    @include tablet {
+      justify-content: space-between;
+    }
+
+    @include mobile {
+      gap: 40px 70px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @include mobile-l {
+      gap: 40px 50px;
+    }
+
+    @include small-mobile {
+      gap: 35px 100px;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    &:has(.footer__sublist--opened) &-head::after {
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease-in;
+    }
+
+    &:has(.footer__sublist--opened) &-head {
+      padding-bottom: 20px;
+      transition: all 0.4s ease-in;
+    }
+
+    @include mobile {
+      min-width: 150px;
+    }
+
+    @include small-mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-width: 250px;
+      text-align: center;
+      padding: 5px 0;
+    }
+
+    &-head {
+      position: relative;
+      transition: all 0.4s ease-in;
+
+      @include small-mobile {
+        display: flex;
+        justify-content: center;
+        justify-content: space-between;
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 1px;
+          background: #fff;
+          opacity: 1;
+          visibility: visible;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          height: 0.8px;
+          background: #fff;
+          opacity: 1;
+          visibility: visible;
+          transition: all 0.4s ease-in;
+        }
+      }
+    }
+
+    &-title {
+      margin-bottom: 24px;
+      font-weight: 700;
+      line-height: 150%;
+
+      @include small-mobile {
+        margin-bottom: 0;
+      }
+    }
+
+    &-svg {
+      display: none;
+
+      @include small-mobile {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 25px;
+        height: 25px;
+        transition: var(--transition);
+      }
+
+      &-vertical {
+        position: absolute;
+        width: 3px;
+        height: 17px;
+        background-color: #fff;
+        transition: var(--transition);
+      }
+
+      &-horizontal {
+        position: absolute;
+        width: 17px;
+        height: 3px;
+        background-color: #fff;
+        transition: var(--transition);
+      }
+
+      &--opened &-vertical {
+        opacity: 0;
+        transform: rotate(90deg);
+        transition: var(--transition);
+      }
+    }
+  }
+
+  &__sublist {
+    @include small-mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      max-height: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease-in;
+
+      &--opened {
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.3s ease-in;
+      }
+    }
+  }
+
+  &__subitem {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    &-link {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      color: var(--neutral-color-110);
+    }
+  }
+
+  // ===================
+
+  &__bottom {
+    @include flex-all-between;
+    gap: 20px 40px;
+    flex-wrap: wrap;
+    border-top: 1px solid var(--neutral-color-70);
+    padding-top: 40px;
+
+    @include mobile-l {
+      gap: 30px 40px;
+    }
+
+    @include tablet {
+      justify-content: center;
+    }
+
+    &-lists {
+      @include flex-align-center;
+      gap: 50px 72px;
+
+      @include tablet {
+        gap: 42px;
+      }
+
+      @include mobile {
+        gap: 20px 72px;
+        flex-direction: column;
+      }
+    }
+
+    &-list {
+      @include flex-align-center;
+      gap: 40px;
+
+      @include mobile-l {
+        gap: 25px;
+      }
+
+      @include small-mobile {
+        gap: 10px 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+
+    &-link {
+      font-weight: 500;
+      line-height: 142%;
+      color: #fff;
+    }
+  }
+
+  &__social {
+    &-list {
+      @include flex-align-center;
+      gap: 24px;
+    }
+
+    &-link {
+      transition: var(--transition);
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &__rights {
+    &-text {
+      font-weight: 500;
+      line-height: 142%;
+      color: #fff;
+    }
+  }
+}
