@@ -1,0 +1,198 @@
+.team {
+  padding: 160px 0;
+
+  @include tablet {
+    padding: 77px 0 121px;
+  }
+
+  @include small-tablet {
+    padding: 35px 0 70px;
+  }
+
+  &__container {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -400px;
+      right: -270px;
+      flex-shrink: 0;
+      border-radius: 525px;
+      width: 551px;
+      height: 551px;
+      background: #e2f8f033;
+      filter: blur(90px);
+      transform: translateY(250px) translateX(-250px);
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    max-width: 900px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: -2px;
+    color: var(--neutral-color-100);
+
+    @include tablet {
+      text-align: center;
+      max-width: none;
+    }
+  }
+
+  &__text {
+    max-width: 534px;
+    font-weight: 500;
+    line-height: 177%;
+    color: var(--neutral-color-110);
+
+    @include tablet {
+      text-align: center;
+      max-width: none;
+    }
+  }
+
+  &__slider {
+    margin: 80px 0 100px;
+  }
+
+  &__slide {
+    position: relative;
+    transform: none !important;
+    // почитать про трансформ, она какого то хуя помогла в прошлом слайдре, а тут чета нихуя блять
+
+    &-footer {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-top: 13px;
+
+      @include large-tablet {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      &-info {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        & span:first-child {
+          font-weight: 600;
+          line-height: 150%;
+          color: var(--neutral-color-100);
+        }
+
+        & span:last-child {
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 150%;
+          color: var(--neutral-color-110);
+        }
+      }
+
+      &-socials {
+        & svg {
+          & path {
+            fill: var(--neutral-color-80);
+          }
+        }
+
+        @include mobile-l {
+          & svg {
+            width: 28px;
+            height: 28px;
+          }
+        }
+      }
+    }
+  }
+
+  // ==================
+
+  &__subheading {
+    @include flex-all-between;
+    gap: 71px;
+
+    @include large-tablet {
+      gap: 35px;
+    }
+
+    @include tablet {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &-right {
+      @include flex-column;
+      gap: 24px;
+      max-width: 506px;
+
+      @include tablet {
+        max-width: none;
+      }
+    }
+
+    &-title {
+      max-width: 629px;
+      font-weight: 600;
+      line-height: 120%;
+      letter-spacing: -2px;
+      color: var(--neutral-color-100);
+
+      @include tablet {
+        max-width: none;
+      }
+    }
+
+    &-text {
+      font-weight: 500;
+      line-height: 177%;
+      color: var(--neutral-color-110);
+    }
+
+    &-extra {
+      font-weight: 700;
+      line-height: 150%;
+      color: var(--neutral-color-100);
+    }
+  }
+}
+
+.team__slide.swiper-slide-active {
+  &::after {
+    content: '';
+    position: absolute;
+    top: 35%;
+    right: 0;
+    z-index: 999;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40' fill='none'%3E%3Cpath d='M24.9998 13.3334L31.6665 20L24.9998 26.6667M14.9998 26.6667L8.33317 20L14.9998 13.3334' stroke='%237E8492' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    @include flex-all-center;
+    background-color: var(--neutral-color-10);
+    transform: translateX(67.5%);
+
+    @include large-tablet {
+      top: 30%;
+    }
+
+    @include tablet {
+      top: 30%;
+      width: 70px;
+      height: 70px;
+      transform: translateX(70.5%);
+    }
+
+    @include mobile {
+      top: 28%;
+      width: 58px;
+      height: 58px;
+      transform: translateX(66%);
+    }
+  }
+}

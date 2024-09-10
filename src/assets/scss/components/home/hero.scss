@@ -11,6 +11,22 @@
   }
 
   &__container {
+    // ЕБАНУТЬ СЮДА ЭФФЕКТ ЧИНАЗЕС ЖЕС ЕС ЖИ ШИ ПИШИ С БУКВОЙ ЖИЕСТ Ь
+
+    // position: relative;
+
+    // &::before {
+    //   content: '';
+    //   position: absolute;
+    //   flex-shrink: 0;
+    //   border-radius: 551px;
+    //   width: 551px;
+    //   height: 551px;
+    //   background-color: #fa7515;
+    //   opacity: 0.13;
+    //   filter: blur(110px);
+    // }
+
     @include flex-justify-between;
     gap: 15px;
     flex-wrap: wrap;

@@ -85,7 +85,7 @@
     content: '';
     position: absolute;
     top: 126px;
-    left: 96%;
+    left: 95.5%;
     z-index: var(--z-index-3);
     border-radius: 50%;
     width: 80px;
@@ -119,6 +119,10 @@
       top: 23%;
       left: 91%;
     }
+
+    // исправить хуйнб снизу
+    // исправить хуйнб снизу
+    // исправить хуйнб снизу
 
     @include mobile-l {
       width: 55px;

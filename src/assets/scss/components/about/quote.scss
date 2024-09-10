@@ -1,0 +1,40 @@
+.quote {
+  &__container {
+    @include flex-all-between;
+    gap: 115px;
+    border-top: 1px solid var(--neutral-color-30);
+    border-bottom: 1px solid var(--neutral-color-30);
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    @include large-tablet {
+      padding-top: 65px;
+      padding-bottom: 65px;
+      gap: 35px;
+    }
+
+    @include tablet {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    max-width: 480px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: -2px;
+    color: var(--neutral-color-100);
+  }
+
+  &__text {
+    max-width: 522px;
+    font-weight: 600;
+    line-height: 150%;
+    color: var(--neutral-color-100);
+
+    @include tablet {
+      max-width: 600px;
+    }
+  }
+}
