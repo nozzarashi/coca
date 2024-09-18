@@ -28,9 +28,9 @@
     padding: 56px 0 32px;
 
     &--opened .faq__item-text {
-      max-height: none;
       overflow: visible;
       opacity: 1;
+      transition: var(--transition);
     }
 
     &:first-child {
@@ -39,6 +39,7 @@
 
     &-head {
       @include flex-all-between;
+      gap: 15px;
     }
 
     &-title {
@@ -84,9 +85,9 @@
       font-weight: 500;
       line-height: 177%;
       color: var(--neutral-color-110);
-      max-height: 0;
-      overflow: hidden;
       opacity: 0;
+      overflow: hidden;
+      max-height: 0;
       transition: var(--transition);
     }
   }
