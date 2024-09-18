@@ -3,17 +3,23 @@
 
   --neutral-color-10: #fff;
   --neutral-color-20: #f5f5f5;
-  --neutral-color-30: #ededed;
+  --neutral-color-30: #ededed; // не меняется
   --neutral-color-40: #ced1d8;
   --neutral-color-60: #18181d;
   --neutral-color-70: #606060;
-  --neutral-color-80: #161a34;
-  --neutral-color-90: #161a34;
+  --neutral-color-80: #161a34; // меняется на белый
+  --neutral-color-90: #161a34; // не меняется
+  --neutral-color-90-1: #161a34; // меняется на темный, в планах pricing
   --neutral-color-100: #1d1e25;
   --neutral-color-110: #7e8492;
   --neutral-color-120: #828282;
   --neutral-color-130: #d9d9d9;
   --neutral-color-140: #000;
+
+  // primary colors
+
+  --primary-color-30: #1463ff;
+  --primary-color-30-1: #1463ff; // меняется для border, в планах pricing
 
   // custom colors
   --primary-color-50: #4e7ddb;
@@ -45,8 +51,10 @@
 
 [data-theme='dark'] {
   --neutral-color-10: #1d1e25;
+  --primary-color-30-1: #4b628f;
   --neutral-color-100: #fff;
   --neutral-color-90: #fff;
+  --neutral-color-90-1: #151519;
   --neutral-color-140: #fff;
 
   // logo colors
