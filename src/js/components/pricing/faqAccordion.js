@@ -4,10 +4,8 @@ export const useFaqAccordion = () => {
   // перебираем коллекцию элементов аккордеона. хочется отметить, а точнее напомнить самому себе в очередной раз, что все, что мы делаем после того, как навесим слушатель событий на айтем, т.е на нажатый нами элемент, мы делаем конректно с этим элементом. Если я хочу как в этом примере, удалить все классы айтемам, то я должен заново пройтись по ним и удалить все классы, потому что если заново не проходиться, то получится так, что я буду удалять только класс у текущего элемента(item).
 
   accordionItems.forEach((item) => {
-    item.addEventListener('click', () => {
-      // названия классов уверен можно было придумать гораздо лучше, еще и currentAccordionItem, который скорее всего тут даже не нужен, но ладно, у меня уже нервов не хватит копаться в этом
-
-      const currentAccordionItem = item.closest('.faq__item');
+    item.addEventListener('click', (event) => {
+      const currentAccordionItem = event.currentTarget;
       const openedAccordionItem = currentAccordionItem.classList.contains('faq__item--opened');
       const openedAccordionContent = currentAccordionItem.querySelector('[data-accordion="content"]');
 

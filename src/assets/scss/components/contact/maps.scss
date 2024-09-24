@@ -1,0 +1,16 @@
+.maps {
+  padding: 90px 0 84px;
+
+  &__title {
+    margin-bottom: 82px;
+    max-width: 741px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -3px;
+    color: var(--neutral-color-100);
+  }
+}
+
+.ymaps3x0--map-copyrights_right {
+  display: none !important;
+}
