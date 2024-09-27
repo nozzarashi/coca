@@ -1,6 +1,26 @@
 .maps {
   padding: 90px 0 84px;
 
+  &__content {
+    width: 100%;
+    height: 544px;
+    flex-grow: 2;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    width: 100%;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    flex-shrink: 1;
+  }
+
   &__title {
     margin-bottom: 82px;
     max-width: 741px;
@@ -9,8 +29,75 @@
     letter-spacing: -3px;
     color: var(--neutral-color-100);
   }
+
+  &__item {
+    border-bottom: 1px solid var(--neutral-color-110);
+    padding-bottom: 14px;
+
+    &-title {
+      margin-bottom: 8px;
+      font-weight: 700;
+      line-height: 133%;
+      color: var(--neutral-color-100);
+    }
+
+    &-text {
+      margin-bottom: 20px;
+      font-weight: 400;
+      line-height: 150%;
+      color: var(--neutral-color-110);
+    }
+
+    &-link {
+      padding: 5px 5px 5px 0;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 162%;
+      text-align: center;
+      color: var(--neutral-color-100);
+    }
+  }
 }
+
+// плашка с правами итд от яндекса
 
 .ymaps3x0--map-copyrights_right {
   display: none !important;
+  color: #b0b9cb;
+}
+
+.ymaps3x0--default-marker__title-wrapper {
+  gap: 8px !important;
+  width: 200px !important;
+  padding: 12px 20px !important;
+  max-width: none !important;
+}
+
+// заголовок
+.ymaps3x0--default-marker__title {
+  color: #161a34 !important;
+  font-size: 16px !important;
+  white-space: normal !important;
+  text-align: start !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  line-height: 142% !important;
+}
+
+// текст
+.ymaps3x0--default-marker__subtitle {
+  color: #7e8492 !important;
+  font-size: 13px !important;
+  white-space: normal !important;
+  text-align: start !important;
+
+  font-weight: 400 !important;
+  line-height: 150% !important;
+}
+
+.ymaps3x0--default-marker__title-box {
+  position: absolute !important;
+  bottom: 72px !important;
+  right: -70px !important;
+  box-shadow: 8px 8px 25px rgba(0, 0, 0, 0.4) !important;
 }
