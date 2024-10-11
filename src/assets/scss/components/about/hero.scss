@@ -11,6 +11,7 @@
 
   &__container {
     position: relative;
+    margin-top: 95px;
 
     &::before {
       content: '';
@@ -24,6 +25,13 @@
       opacity: 0.13;
       filter: blur(110px);
       transform: translateY(250px) translateX(-250px);
+      z-index: -1;
+
+      @include small-tablet {
+        width: 321px;
+        height: 321px;
+        transform: translateY(250px) translateX(-40px);
+      }
     }
   }
 

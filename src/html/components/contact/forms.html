@@ -1,0 +1,47 @@
+<section class="forms">
+  <div class="container form__container">
+    <div id="contact-form" class="form">
+      <h4 class="form__title heading-h4">
+        Let’s level up your brand
+      </h4>
+      <p class="form__text text-p-medium">
+        You can reach us anytime <a href="mailto:hellosansbrothers@gmail.com">hellosansbrothers@gmail.com</a>
+      </p>
+
+      <form class="form__body" action="">
+        <div class="form__body-row1">
+          <label class="form__label form__label--fname">
+            First name
+            <input class="form__input" type="text" placeholder="First name" required minlength="3"
+              pattern="[A-Za-zА-Яа-яЁё\s]+">
+          </label>
+          <label class="form__label form__label--lname">
+            Last name
+            <input class="form__input" type="text" placeholder="Last name" required minlength="3"
+              pattern="[A-Za-zА-Яа-яЁё\s]+">
+          </label>
+        </div>
+        <label class="form__label form__label--email">
+          Email
+          <input required class="form__input" type="email" placeholder="you@company.com" minlength="3">
+        </label>
+        <label class="form__label form__label--phone">
+          Phone number
+          <input id="phone" class="form__input" type="tel">
+          <span id="error-msg" class="hide"></span>
+        </label>
+        <label class="form__label form__label--msg">
+          Message
+          <textarea class="form__input form__input--msg" type="text" placeholder="Leave us a message..."
+            minlength="7"></textarea>
+        </label>
+        <button id="btn" type="submit" class="form__btn button-form">
+          Get Started
+        </button>
+      </form>
+    </div>
+    <div class="form__pic">
+      <img src="./assets/images/contact/contact-form-pic.png" width="987" height="885" alt="">
+    </div>
+  </div>
+</section>

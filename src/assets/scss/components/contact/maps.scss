@@ -1,5 +1,15 @@
 .maps {
-  padding: 90px 0 84px;
+  &__container {
+    margin-top: 95px;
+    border-bottom: 1px solid var(--neutral-color-30);
+    padding-top: 90px;
+    padding-bottom: 84px;
+
+    @include small-tablet {
+      padding-top: 35px;
+      padding-bottom: 70px;
+    }
+  }
 
   &__content {
     width: 100%;
@@ -10,8 +20,12 @@
   &__wrapper {
     display: flex;
     justify-content: center;
-    gap: 5%;
+    gap: 40px 72px;
     width: 100%;
+
+    @include small-tablet {
+      flex-direction: column;
+    }
   }
 
   &__list {
@@ -19,6 +33,17 @@
     flex-direction: column;
     gap: 40px;
     flex-shrink: 1;
+
+    @include small-tablet {
+      flex-direction: row;
+      gap: 30px;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   &__title {
@@ -28,11 +53,19 @@
     line-height: 120%;
     letter-spacing: -3px;
     color: var(--neutral-color-100);
+
+    @include mobile {
+      margin-bottom: 62px;
+    }
   }
 
   &__item {
     border-bottom: 1px solid var(--neutral-color-110);
     padding-bottom: 14px;
+
+    @include mobile {
+      text-align: center;
+    }
 
     &-title {
       margin-bottom: 8px;
@@ -60,6 +93,10 @@
 }
 
 // плашка с правами итд от яндекса
+
+.ymaps3x0--map {
+  width: 100% !important;
+}
 
 .ymaps3x0--map-copyrights_right {
   display: none !important;

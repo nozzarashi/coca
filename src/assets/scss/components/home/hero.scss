@@ -11,26 +11,59 @@
   }
 
   &__container {
-    // ЕБАНУТЬ СЮДА ЭФФЕКТ ЧИНАЗЕС ЖЕС ЕС ЖИ ШИ ПИШИ С БУКВОЙ ЖИЕСТ Ь
-
-    // position: relative;
-
-    // &::before {
-    //   content: '';
-    //   position: absolute;
-    //   flex-shrink: 0;
-    //   border-radius: 551px;
-    //   width: 551px;
-    //   height: 551px;
-    //   background-color: #fa7515;
-    //   opacity: 0.13;
-    //   filter: blur(110px);
-    // }
-
+    position: relative;
     @include flex-justify-between;
     gap: 15px;
     flex-wrap: wrap;
     align-items: flex-end;
+    margin-top: 95px;
+
+    // поменять расположение кружков на заднем фоне и +
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -380px;
+      left: 180px;
+      flex-shrink: 0;
+      border-radius: 551px;
+      width: 551px;
+      height: 551px;
+      background-color: #fa7515;
+      opacity: 0.13;
+      filter: blur(110px);
+      transform: translateY(250px) translateX(-250px);
+      z-index: -1;
+
+      @include small-tablet {
+        width: 321px;
+        height: 321px;
+        transform: translateY(390px) translateX(-176px);
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -270px;
+      z-index: -1;
+      flex-shrink: 0;
+      border-radius: 525px;
+      width: 551px;
+      height: 551px;
+      background: #e2f8f033;
+      filter: blur(90px);
+      transform: translateY(250px) translateX(-250px);
+
+      @include small-tablet {
+        & {
+          width: 321px;
+          height: 321px;
+          transform: translateY(410px) translateX(-211px);
+        }
+      }
+    }
 
     @include mini-desktop {
       gap: 130px;

@@ -46,7 +46,7 @@
     left: 0;
     width: 100%;
     height: var(--burger-line-height);
-    background-color: currentcolor;
+    background-color: var(--neutral-color-140);
     transform: translateY(-50%);
     transition: transform;
     transition-duration: 0.2s;
@@ -62,6 +62,7 @@
   &--active {
     &::before {
       top: 50%;
+      background-color: var(--neutral-color-40);
       transform: rotateZ(-45deg);
       transition:
         top 0.2s,
@@ -70,6 +71,7 @@
 
     &::after {
       top: 50%;
+      background-color: var(--neutral-color-40);
       transform: rotateZ(45deg);
       transition:
         top 0.35s,

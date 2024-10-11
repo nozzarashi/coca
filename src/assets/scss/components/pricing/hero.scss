@@ -7,6 +7,7 @@
 
   &__container {
     position: relative;
+    margin-top: 95px;
 
     &::before {
       content: '';
@@ -22,6 +23,12 @@
       filter: blur(110px);
       transform: translateY(250px) translateX(-250px);
       z-index: -1;
+
+      @include small-tablet {
+        width: 321px;
+        height: 321px;
+        transform: translateY(390px) translateX(-176px);
+      }
     }
 
     &::after {
@@ -37,6 +44,12 @@
       filter: blur(90px);
       transform: translateY(250px) translateX(-250px);
       z-index: -1;
+
+      @include small-tablet {
+        width: 321px;
+        height: 321px;
+        transform: translateY(410px) translateX(-211px);
+      }
     }
   }
 

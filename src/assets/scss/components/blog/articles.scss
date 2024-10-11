@@ -1,0 +1,111 @@
+.articles {
+  padding: 160px 0;
+
+  @include small-tablet {
+    padding: 70px 0;
+  }
+
+  &__top {
+    @include flex-align-center;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    gap: 20px;
+
+    @include mobile {
+      justify-content: center;
+      margin-bottom: 60px;
+    }
+
+    &-wrapper {
+      @include flex-column;
+      gap: 24px;
+      max-width: 435px;
+    }
+
+    &-title {
+      font-weight: 600;
+      line-height: 120%;
+      letter-spacing: -2px;
+      color: var(--neutral-color-100);
+    }
+
+    &-text {
+      font-weight: 500;
+      line-height: 177%;
+      color: var(--neutral-color-110);
+    }
+
+    &-btns {
+      @include flex-align-center;
+      gap: 16px;
+      justify-content: end;
+    }
+  }
+
+  &__btn {
+    @include flex-all-center;
+    border: 1px solid var(--neutral-color-40);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    transition: var(--transition);
+
+    @include mobile {
+      display: none;
+    }
+
+    svg path {
+      transition: var(--transition);
+    }
+
+    &:hover {
+      background-color: var(--neutral-color-100);
+      border-color: var(--neutral-color-100);
+
+      svg path {
+        fill: var(--neutral-color-10);
+      }
+    }
+
+    &--next {
+      transform: rotate(-180deg);
+    }
+  }
+
+  &__slide {
+    &-title {
+      margin-bottom: 16px;
+      font-weight: 600;
+      line-height: 131%;
+      letter-spacing: -1px;
+      color: var(--neutral-color-100);
+    }
+
+    &-text {
+      margin-bottom: 30px;
+      font-weight: 500;
+      font-style: normal;
+      line-height: 177%;
+      color: var(--neutral-color-110);
+    }
+
+    &-button {
+      border: 1px solid var(--neutral-color-40);
+      border-radius: 100px;
+      padding: 16px 32px;
+      font-weight: 700;
+      line-height: 150%;
+      color: var(--neutral-color-100);
+      transition: all 0.4s ease;
+
+      &:hover {
+        background-color: var(--neutral-color-100);
+        color: var(--neutral-color-10);
+      }
+    }
+  }
+}
+
+.swiper {
+  padding-bottom: 20px !important;
+}

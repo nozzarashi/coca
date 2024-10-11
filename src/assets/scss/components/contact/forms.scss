@@ -1,0 +1,156 @@
+.form {
+  position: absolute;
+  left: 4%;
+  border: 1px solid var(--neutral-color-40);
+  padding: 56px 48px;
+  max-width: 608px;
+  background: #fff;
+
+  @include mini-desktop {
+    max-width: 538px;
+  }
+
+  @include tablet {
+    left: var(--container-padding);
+  }
+
+  @include small-tablet {
+    position: inherit;
+  }
+
+  @include mobile-l {
+    padding: 46px 20px;
+  }
+
+  &__pic {
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+    justify-content: end;
+    border-top: 1px solid var(--neutral-color-30);
+    padding-top: 120px;
+    padding-right: 0;
+    padding-bottom: 160px;
+    max-width: 1440px;
+
+    @include small-tablet {
+      position: static;
+      justify-content: center;
+      padding-right: var(--container-padding);
+    }
+
+    @include mobile {
+      padding-top: 50px;
+      padding-bottom: 80px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 122%;
+    letter-spacing: -0.72px;
+    color: #1d1e25;
+  }
+
+  &__text {
+    margin-bottom: 48px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 166%;
+    color: var(--neutral-color-110);
+  }
+
+  &__body {
+    &-row1 {
+      @include flex-align-center;
+      gap: 32px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__label {
+    font-weight: 500;
+    line-height: 142%;
+    color: #1d1e25;
+
+    &--email,
+    &--phone,
+    &--msg {
+      display: flex;
+      gap: 6px;
+      flex-direction: column;
+      align-items: start;
+    }
+
+    &--email,
+    &--phone {
+      margin-bottom: 24px;
+    }
+
+    &--msg {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    border: 1px solid var(--neutral-color-30);
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%;
+    color: var(--neutral-color-110);
+    background: #fff;
+
+    &--msg {
+      margin-bottom: 32px;
+      min-height: 115px;
+      resize: none;
+    }
+
+    &::placeholder {
+      vertical-align: top; // Устанавливает вертикальное выравнивание (при необходимости)
+      text-align: start; // Обеспечивает начальное выравнивание по горизонтали
+    }
+  }
+
+  &__btn {
+    color: #fff;
+    border-radius: 100px;
+    padding: 16px 32px;
+    max-width: 167px;
+    background: #1d1e25;
+  }
+}
+
+// =================================
+
+// покрасил в черный текст в выборе стран
+
+.iti__country {
+  color: black !important;
+}
+
+// уменьшил размер шрифта для междунродного кода страны
+
+.iti__selected-dial-code {
+  font-size: 14px !important;
+}
+
+// растянул на всю длину инпут маски телефона
+
+.iti {
+  width: 100% !important;
+}
+
+#error-msg {
+  color: rgb(214, 24, 24);
+}

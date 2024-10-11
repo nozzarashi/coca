@@ -24,6 +24,13 @@
       background: #e2f8f033;
       filter: blur(90px);
       transform: translateY(250px) translateX(-250px);
+      z-index: -1;
+
+      @include small-tablet {
+        width: 321px;
+        height: 321px;
+        transform: translateY(365px) translateX(-262px);
+      }
     }
   }
 

@@ -1,6 +1,27 @@
 .header {
-  z-index: var(--z-index-3);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 5;
   padding: 26px 0 22px;
+  background-color: var(--neutral-color-10-1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-50%);
+  transition: all 0.3s;
+  backdrop-filter: blur(8px);
+
+  &--show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  &--transparent {
+    background-color: transparent;
+    backdrop-filter: none;
+  }
 
   @include mobile {
     padding: 22px 0 18px;
@@ -109,8 +130,15 @@
   }
 }
 
+.body--fixed .header {
+  background-color: transparent;
+  backdrop-filter: none;
+}
+
 .nav {
-  margin-bottom: 50px;
+  @include small-tablet {
+    margin-bottom: 50px;
+  }
 
   &__list {
     gap: 32px;
