@@ -1,4 +1,4 @@
-import '../assets/scss/info.scss';
+import '/scss/info.scss';
 
 // components
 

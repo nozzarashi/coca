@@ -16,20 +16,20 @@
       content: '';
       position: absolute;
       top: -400px;
-      right: -270px;
+      right: 0;
+      z-index: -1;
       flex-shrink: 0;
       border-radius: 525px;
       width: 551px;
       height: 551px;
       background: #e2f8f033;
       filter: blur(90px);
-      transform: translateY(250px) translateX(-250px);
-      z-index: -1;
+      transform: translateY(250px);
 
       @include small-tablet {
-        width: 321px;
-        height: 321px;
-        transform: translateY(365px) translateX(-262px);
+        width: 280px;
+        height: 280px;
+        transform: translateY(365px);
       }
     }
   }

@@ -9,6 +9,7 @@ html {
 }
 
 .body {
+  overflow-x: hidden !important;
   margin-top: 105px;
   box-sizing: border-box;
   font-family: Inter, sans-serif;
@@ -19,7 +20,7 @@ html {
   scroll-behavior: smooth !important;
 
   &--fixed {
-    overflow-y: hidden;
+    overflow-y: hidden !important;
   }
 }
 
